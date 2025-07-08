@@ -1,0 +1,176 @@
+# AI Twin Content Studio – Data Model
+
+## Entities and Relationships
+
+---
+
+## 1. User
+- **user_id** (PK)
+- name
+- email
+- password_hash
+- role (creator, admin)
+- subscription_plan
+- created_at
+- last_login
+
+**Relationships:**
+- Has many `ContentCalendars`
+- Has many `AIAvatars`
+- Has many `Projects`
+- Has many `SocialAccounts`
+
+---
+
+## 2. ContentCalendar
+- **calendar_id** (PK)
+- user_id (FK → User)
+- title
+- description
+- start_date
+- end_date
+
+**Relationships:**
+- Has many `ContentScripts`
+- Belongs to `User`
+
+---
+
+## 3. ContentScript
+- **script_id** (PK)
+- calendar_id (FK → ContentCalendar)
+- project_id (FK → Project)
+- title
+- script_text
+- tone
+- topic_tag
+- status (draft, approved, rejected)
+- created_at
+- updated_at
+
+**Relationships:**
+- Belongs to `ContentCalendar`
+- Belongs to `Project`
+
+---
+
+## 4. Project
+- **project_id** (PK)
+- user_id (FK → User)
+- title
+- description
+- ai_avatar_id (FK → AIAvatar)
+- status (draft, rendered, published)
+- publish_date
+- created_at
+
+**Relationships:**
+- Has one `RenderedVideo`
+- Belongs to `User`
+- Uses one `AIAvatar`
+- Has many `ContentScripts`
+
+---
+
+## 5. AIAvatar
+- **ai_avatar_id** (PK)
+- user_id (FK → User)
+- name
+- avatar_style (goddess, futurist, celestial, etc.)
+- voice_id (FK → AIVoice)
+- config_json (facial map, animation settings)
+- created_at
+
+**Relationships:**
+- Belongs to `User`
+- Has one `AIVoice`
+- Used in many `Projects`
+
+---
+
+## 6. AIVoice
+- **voice_id** (PK)
+- name
+- type (default, custom, cloned)
+- pitch
+- speed
+- gender
+- sample_url
+
+**Relationships:**
+- Used by many `AIAvatars`
+
+---
+
+## 7. RenderedVideo
+- **video_id** (PK)
+- project_id (FK → Project)
+- file_url
+- duration
+- resolution
+- format
+- caption_text
+- tts_voice_used (FK → AIVoice)
+- created_at
+
+**Relationships:**
+- Belongs to one `Project`
+
+---
+
+## 8. SocialAccount
+- **account_id** (PK)
+- user_id (FK → User)
+- platform (Instagram, TikTok, YouTube, etc.)
+- access_token
+- refresh_token
+- username
+- is_connected (boolean)
+- last_synced_at
+
+**Relationships:**
+- Belongs to `User`
+- Has many `SocialPosts`
+
+---
+
+## 9. SocialPost
+- **post_id** (PK)
+- video_id (FK → RenderedVideo)
+- account_id (FK → SocialAccount)
+- platform
+- caption
+- scheduled_time
+- publish_status (draft, scheduled, published, failed)
+- engagement_metrics_json
+- published_at
+
+**Relationships:**
+- Belongs to `RenderedVideo`
+- Belongs to `SocialAccount`
+
+---
+
+## 10. WeeklyReport
+- **report_id** (PK)
+- user_id (FK → User)
+- start_date
+- end_date
+- total_views
+- total_likes
+- total_comments
+- total_shares
+- top_performing_post_id (FK → SocialPost)
+- generated_at
+
+**Relationships:**
+- Belongs to `User`
+- References `SocialPost` for top performance
+
+---
+
+## Notes:
+- All timestamp fields should use ISO 8601 (`YYYY-MM-DDTHH:MM:SSZ`)
+- JSON fields should be indexed if needed for filtering/sorting
+- Video and asset files are stored via a cloud storage solution (e.g., S3)
+
