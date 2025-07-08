@@ -1,0 +1,16 @@
+| ID    | Title                        | Epic | Priority | Status      | Sprint   | Assignee | BDD Linked | Notes                          |
+| ----- | ---------------------------- | ---- | -------- | ----------- | -------- | -------- | ---------- | ------------------------------ |
+| US101 | AI script generator          | EP01 | High     | To Do       | Sprint 1 | TBD      | ✅          | GPT-powered                    |
+| US102 | Visual content calendar      | EP01 | Medium   | Backlog     | Sprint 3 | TBD      | ❌          | Integrate w/ Google/iCal       |
+| US201 | AI twin avatar creation      | EP02 | High     | In Progress | Sprint 1 | TBD      | ✅          | Upload reference, select style |
+| US202 | Avatar library management    | EP02 | Medium   | Backlog     | Sprint 3 | TBD      | ❌          | Clone and reuse                |
+| US301 | TTS voice integration        | EP03 | High     | To Do       | Sprint 2 | TBD      | ✅          | Use ElevenLabs API             |
+| US302 | Caption sync engine          | EP03 | Medium   | Backlog     | Sprint 3 | TBD      | ❌          | Timed transcription            |
+| US401 | Bulk reel creation           | EP04 | High     | Backlog     | Sprint 3 | TBD      | ✅          | CSV import and selection       |
+| US402 | Reel preview and approval    | EP04 | Medium   | Backlog     | Sprint 4 | TBD      | ❌          | UI modal previews              |
+| US501 | Social account integrations  | EP05 | Medium   | Backlog     | Sprint 4 | TBD      | ❌          | Instagram, TikTok, etc.        |
+| US502 | Post scheduler and publisher | EP05 | High     | Backlog     | Sprint 4 | TBD      | ❌          | Aligned with calendar          |
+| US601 | Analytics dashboard          | EP06 | Medium   | Backlog     | Sprint 5 | TBD      | ❌          | Per twin, per platform         |
+| US602 | Weekly PDF report            | EP06 | Medium   | Backlog     | Sprint 5 | TBD      | ✅          | Auto-generate Sundays          |
+| US701 | Guided onboarding UI         | EP07 | Low      | Backlog     | Sprint 6 | TBD      | ❌          | Slides + tooltips              |
+| US702 | Admin roles and permissions  | EP07 | Low      | Backlog     | Sprint 6 | TBD      | ❌          | Creator/Admin distinction      |
