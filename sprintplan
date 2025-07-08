@@ -1,0 +1,111 @@
+# AI Twin Content Studio – Sprint Plan
+
+## Sprint Framework
+- **Sprint Length:** 2 weeks
+- **Total Sprints (MVP):** 6
+- **Team:** 1 PM, 1 UI/UX, 2 Frontend, 2 Backend, 1 ML/AI Engineer
+- **Tracking Fields:** Story ID, Title, Effort (pts), Status, Assignee, Dependencies, Notes
+
+---
+
+## 🏁 Sprint 1: Core Infrastructure + AI Scripting
+
+**Sprint Goal:** Lay backend foundations and build first working feature — AI script generation.
+
+| ID     | Title                               | Effort | Status   | Assignee | Dependencies | Notes |
+|--------|-------------------------------------|--------|----------|----------|--------------|-------|
+| US101  | AI script generator                 | 5      | In Progress | AI Dev   | None         | Integrate OpenAI API (GPT) |
+| US201  | AI twin avatar creation (UI only)   | 3      | To Do    | Frontend | None         | Avatar style presets |
+| US701  | User authentication & onboarding    | 5      | To Do    | Backend  | None         | Includes email login & OAuth |
+| SYS01  | Backend scaffolding (Node + DB)     | 8      | To Do    | Backend  | None         | Database schema, auth layer |
+
+---
+
+## 🧠 Sprint 2: Voice & Caption System
+
+**Sprint Goal:** Enable video voiceover generation and captions synced to scripts.
+
+| ID     | Title                               | Effort | Status   | Assignee | Dependencies     | Notes |
+|--------|-------------------------------------|--------|----------|----------|------------------|-------|
+| US301  | TTS voice integration               | 5      | To Do    | AI Dev   | US101            | Use ElevenLabs |
+| US302  | Caption overlay sync                | 5      | To Do    | Backend  | US301            | Auto captions via TTS |
+| US202  | Avatar library + clone/edit         | 3      | To Do    | Frontend | US201            | Persona management UI |
+| SYS02  | Storage for video + avatars         | 5      | To Do    | Backend  | SYS01            | Use AWS S3 or Firebase |
+
+---
+
+## 🎞 Sprint 3: Batch Reel Builder + Calendar
+
+**Sprint Goal:** Add batch generation of reels, calendar UI, and support asset uploads.
+
+| ID     | Title                               | Effort | Status   | Assignee | Dependencies     | Notes |
+|--------|-------------------------------------|--------|----------|----------|------------------|-------|
+| US401  | Bulk reel creation from scripts     | 8      | To Do    | AI Dev   | US101, US301     | Use job queue for rendering |
+| US102  | Content calendar UI (drag-drop)     | 3      | To Do    | Frontend | None             | Weekly/monthly views |
+| US402  | Preview/approve reels               | 3      | To Do    | Frontend | US401            | Include thumbnail previews |
+| SYS03  | CSV input parser + validation       | 2      | To Do    | Backend  | US401            | For uploading batches of scripts |
+
+---
+
+## 📤 Sprint 4: Publishing Engine
+
+**Sprint Goal:** Support multi-platform scheduling and publishing of reels.
+
+| ID     | Title                               | Effort | Status   | Assignee | Dependencies     | Notes |
+|--------|-------------------------------------|--------|----------|----------|------------------|-------|
+| US501  | Social account integration          | 5      | To Do    | Backend  | SYS01            | Instagram, TikTok, YouTube |
+| US502  | Scheduler engine                    | 5      | To Do    | Backend  | US102, US401     | Time-based triggers |
+| UI501  | Publishing dashboard UI             | 3      | To Do    | Frontend | US502            | Status indicators per platform |
+| SYS04  | Background publishing worker        | 5      | To Do    | Backend  | US502            | Auto-triggered posting |
+
+---
+
+## 📊 Sprint 5: Analytics + Reports
+
+**Sprint Goal:** Deliver insights dashboard and weekly report generation.
+
+| ID     | Title                               | Effort | Status   | Assignee | Dependencies     | Notes |
+|--------|-------------------------------------|--------|----------|----------|------------------|-------|
+| US601  | Analytics dashboard (UI + logic)    | 5      | To Do    | Backend  | SYS04, US502     | Per video, platform, avatar |
+| US602  | Weekly report PDF generator         | 5      | To Do    | Backend  | US601            | PDF export using wkhtmltopdf |
+| UI601  | Dashboard filters + top performer   | 3      | To Do    | Frontend | US601            | Date range and twin filters |
+| SYS05  | Analytics data pipeline             | 5      | To Do    | Backend  | SYS04            | API integrations for metrics |
+
+---
+
+## 🧪 Sprint 6: Polish + Admin Features
+
+**Sprint Goal:** Finalize MVP with admin roles, onboarding, and bug fixes.
+
+| ID     | Title                               | Effort | Status   | Assignee | Dependencies     | Notes |
+|--------|-------------------------------------|--------|----------|----------|------------------|-------|
+| US702  | Role-based access (Admin/Creator)   | 3      | To Do    | Backend  | SYS01            | Permissions logic |
+| US701B | Onboarding flow (tooltips/tutorial) | 3      | To Do    | Frontend | US701            | Intro tour on first login |
+| QA01   | Cross-platform testing & QA         | 5      | To Do    | All Devs | All              | Mobile + web testing |
+| SYS06  | Performance optimization & cleanup  | 5      | To Do    | Backend  | All              | CDN, query tuning |
+
+---
+
+## 🔁 Optional Post-MVP Sprint: Avatar Marketplace (Stretch Goal)
+
+**Sprint Goal:** Allow users to buy, sell, or share AI twins.
+
+| ID     | Title                               | Effort | Status   | Assignee | Dependencies     | Notes |
+|--------|-------------------------------------|--------|----------|----------|------------------|-------|
+| MP01   | Avatar marketplace backend          | 8      | Backlog  | Backend  | US202            | Stripe or crypto payments |
+| MP02   | Avatar listing/browse UI            | 5      | Backlog  | Frontend | MP01             | Tags + preview |
+| MP03   | Clone/download purchased twin       | 3      | Backlog  | Backend  | MP01             | Add to user library |
+
+---
+
+## 📌 Velocity Tracking Template (Suggested)
+
+```text
+Sprint | Committed Points | Completed Points | Velocity (%)
+-------|------------------|------------------|---------------
+1      | 21               | 19               | 90%
+2      | 18               | TBD              | TBD
+3      | 19               | TBD              | TBD
+4      | 18               | TBD              | TBD
+5      | 18               | TBD              | TBD
+6      | 16               | TBD              | TBD
