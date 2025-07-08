@@ -1,0 +1,30 @@
+Feature: AI-assisted script generation
+
+Scenario: User generates a script from a topic prompt
+  Given I am logged into my account
+  When I select “Generate Script”
+  And I enter the topic “What is Web3?”
+  Then the system generates a 15-second script in my chosen tone
+  And I can edit or approve the script
+Feature: AI Twin avatar creation
+
+Scenario: User creates a new avatar with a goddess style
+  Given I am on the AI Twin creation page
+  When I select the “Goddess” style and upload a reference video
+  Then the system renders an AI avatar
+  And saves it to my avatar library
+Feature: Batch reel generation
+
+Scenario: User generates reels from a batch of scripts
+  Given I have uploaded 10 scripts
+  And selected my AI twin and voice
+  When I click “Generate Reels”
+  Then the system creates 10 videos under 15 seconds each
+  And displays previews with status
+Feature: Weekly performance report
+
+Scenario: User views auto-generated report
+  Given it is the end of the week
+  When I open the Analytics tab
+  Then I see top-performing content
+  And a downloadable PDF report is available
