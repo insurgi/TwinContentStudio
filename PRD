@@ -1,0 +1,136 @@
+# Product Requirements Document (PRD)
+
+## Product Name: AI Twin Content Studio  
+**Prepared By:** Alexandra Mitchelson  
+**Date:** June 19, 2025  
+**Version:** 1.0  
+
+---
+
+## 1. Purpose  
+To streamline and centralize the entire workflow of AI-powered educational content creation and publishing across social media platforms. This tool will automate and integrate all the tasks currently handled across multiple apps (ChatGPT, CapCut, Snapchat, TikTok, Captions, etc.) into a single platform.
+
+---
+
+## 2. Product Overview  
+**AI Twin Content Studio** is a web and mobile application designed for creators who produce short-form educational content using AI avatars. It empowers users to generate scripts, edit videos, apply AI twin filters, produce voiced-over videos, and schedule or instantly publish to social channels — all within a single, cohesive ecosystem.
+
+---
+
+## 3. Features & Requirements
+
+### 3.1 Content Calendar + Script Creation  
+- **Feature:** AI-powered calendar & scripting tool  
+- **User Actions:**  
+  - Set content themes or topics  
+  - Auto-generate daily/weekly scripts (editable)  
+  - Drag & drop content scheduling  
+- **Tech Requirements:**  
+  - GPT-based script generator with tone/style presets  
+  - Google Calendar or iCal sync  
+
+---
+
+### 3.2 AI Twin Video Creation & Editing  
+- **Feature:** AI avatar generator & short video editor  
+- **User Actions:**  
+  - Upload video or record directly in app  
+  - Apply AI twin filters (style presets: goddess, futurist, celestial, corporate, etc.)  
+  - Adjust facial mapping, expressions, and gestures  
+- **Tech Requirements:**  
+  - Real-time video style transfer  
+  - Avatar/puppet-based face + voice sync tech  
+  - Filter management UI for switching personas  
+
+---
+
+### 3.3 AI Voiceover + Captions  
+- **Feature:** Automated voiceover + text caption overlay  
+- **User Actions:**  
+  - Select voice from library or clone own voice  
+  - Add or generate captions (with editable timing)  
+- **Tech Requirements:**  
+  - Text-to-speech synthesis (multi-tone)  
+  - Caption timing engine + auto-highlighting  
+
+---
+
+### 3.4 AI Twin Library Management  
+- **Feature:** Create and store multiple AI twins  
+- **User Actions:**  
+  - Design new avatars with style presets  
+  - Save, clone, and apply twins to any script/video  
+- **Tech Requirements:**  
+  - Avatar template system  
+  - Editable personality/tone/style tags  
+
+---
+
+### 3.5 Bulk Reel Creation (15s or less)  
+- **Feature:** Generate hundreds of short reels using scripts and AI twins  
+- **User Actions:**  
+  - Upload CSV of prompts or select batch from content calendar  
+  - Select desired AI twin + voice  
+  - Auto-produce batch of reels (downloadable or directly publishable)  
+- **Tech Requirements:**  
+  - Background rendering pipeline  
+  - Queue management + status dashboard  
+
+---
+
+### 3.6 Publishing & Scheduling  
+- **Feature:** Multi-platform publishing dashboard  
+- **User Actions:**  
+  - Connect social accounts (Instagram, TikTok, LinkedIn, YouTube Shorts, Fanbase, Spill)  
+  - Schedule or instantly publish content  
+  - Preview post format per platform  
+- **Tech Requirements:**  
+  - API integrations with all supported platforms  
+  - Auto-format content to fit platform specs  
+  - Draft/save/publish states  
+
+---
+
+### 3.7 Analytics Dashboard  
+- **Feature:** Weekly reporting and performance tracking  
+- **User Actions:**  
+  - View metrics by video, platform, and twin persona  
+  - Download reports as PDF or CSV  
+- **Tech Requirements:**  
+  - Data aggregation across social APIs  
+  - Filter by date range, twin used, topic category  
+
+---
+
+## 4. User Roles  
+- **Creator (default user):** Full access to all features  
+- **Admin (optional for team):** Manage users, brand assets, and permissions  
+
+---
+
+## 5. Tech Stack Recommendations  
+- **Frontend:** React (web), Flutter (mobile)  
+- **Backend:** Node.js + Python  
+- **Video Processing:** FFmpeg, TensorFlow, DeepFaceLab (for avatars)  
+- **AI/ML APIs:** OpenAI (for GPT), ElevenLabs (TTS), Meta/TikTok filters (if integrated)  
+- **Analytics:** Mixpanel or custom dashboard using Google Data Studio  
+
+---
+
+## 6. Success Metrics  
+- Time saved per content creation cycle (goal: 75% reduction)  
+- # of reels published per week (goal: 100+ batch per week capability)  
+- Increase in engagement across social channels  
+- User retention and avatar reuse frequency  
+
+---
+
+## 7. Timeline & MVP Scope  
+**MVP Timeline:** 3–6 months  
+
+### MVP Features:  
+- Script Generator  
+- Basic AI Twin Creator  
+- 15s Reel Auto-Builder  
+- Direct publishing to Instagram & TikTok  
+- Weekly PDF reports  
