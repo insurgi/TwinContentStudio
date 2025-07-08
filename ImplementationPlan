@@ -1,0 +1,79 @@
+# AI Twin Content Studio – Agile Project Plan
+
+## 1. User Epics
+
+### EP01 – Content Planning & Scripting
+Enable creators to plan and auto-generate scripts using AI.
+
+### EP02 – AI Twin Creation & Personalization
+Allow users to design and manage custom AI twin avatars with various styles and voices.
+
+### EP03 – Video Creation with Voiceover & Captions
+Support short-form video generation with avatars, voiceovers, and synced captions.
+
+### EP04 – Batch Reel Generator
+Enable bulk creation of short educational reels (15s or less) from AI-generated scripts.
+
+### EP05 – Cross-Platform Publishing & Scheduling
+Allow users to schedule and publish to multiple social media channels.
+
+### EP06 – Analytics & Weekly Reporting
+Provide performance insights and weekly downloadable content reports.
+
+### EP07 – User Onboarding & Role Management
+Deliver a smooth onboarding experience and user permission controls for creators and admins.
+
+---
+
+## 2. User Stories
+
+### EP01 – Content Planning & Scripting
+
+- **US101:** As a creator, I want to auto-generate scripts from topic prompts using AI so I can ideate faster.
+- **US102:** As a creator, I want to manage scripts in a visual content calendar so I can stay organized.
+
+### EP02 – AI Twin Creation
+
+- **US201:** As a creator, I want to create and customize AI avatars with different style presets (e.g., goddess, celestial) for varied content.
+- **US202:** As a creator, I want to save, clone, and reuse avatars across different projects for consistency.
+
+### EP03 – Voiceover & Captions
+
+- **US301:** As a creator, I want to apply TTS voiceovers to scripts using cloned or preset voices.
+- **US302:** As a creator, I want captions to automatically sync with my audio to improve accessibility.
+
+### EP04 – Batch Reel Generator
+
+- **US401:** As a creator, I want to upload or select multiple scripts and generate reels with selected avatars.
+- **US402:** As a creator, I want to preview and approve reels before publishing.
+
+### EP05 – Publishing & Scheduling
+
+- **US501:** As a creator, I want to connect and manage multiple social media accounts in one place.
+- **US502:** As a creator, I want to schedule and auto-publish posts aligned with my content calendar.
+
+### EP06 – Analytics & Reporting
+
+- **US601:** As a creator, I want to view performance metrics by platform, persona, and topic.
+- **US602:** As a creator, I want a weekly PDF report of engagement stats across all platforms.
+
+### EP07 – Onboarding & Roles
+
+- **US701:** As a new user, I want an onboarding guide so I can learn how to use the platform quickly.
+- **US702:** As an admin, I want to assign roles and manage user access across my team.
+
+---
+
+## 3. BDD (Behavior-Driven Development)
+
+### US101 – Script Generator
+
+```gherkin
+Feature: AI-assisted script generation
+
+Scenario: User generates a script from a topic prompt
+  Given I am logged into my account
+  When I select "Generate Script"
+  And I enter the topic "What is Web3?"
+  Then the system generates a 15-second script in my selected tone
+  And I can edit or approve the script
